@@ -15,7 +15,6 @@ namespace USBWatchdogControl
 	public static class Globals
 	{
 		public const String INI_FILENAME = "usbwatchdog-config.ini";
-				
-				
+								
 	}
 }

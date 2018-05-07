@@ -18,6 +18,7 @@ namespace USBWatchdogControl
 		private System.Windows.Forms.Label lblSeconds;
 		private System.Windows.Forms.Button btnOK;
 		private System.Windows.Forms.Button btnCancel;
+		private System.Windows.Forms.CheckBox chkAutostart;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -45,6 +46,7 @@ namespace USBWatchdogControl
 			this.lblSeconds = new System.Windows.Forms.Label();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
+			this.chkAutostart = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nUDHeartbeatTimeout)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -88,7 +90,7 @@ namespace USBWatchdogControl
 			// 
 			// btnOK
 			// 
-			this.btnOK.Location = new System.Drawing.Point(110, 60);
+			this.btnOK.Location = new System.Drawing.Point(110, 86);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(75, 23);
 			this.btnOK.TabIndex = 3;
@@ -98,7 +100,7 @@ namespace USBWatchdogControl
 			// 
 			// btnCancel
 			// 
-			this.btnCancel.Location = new System.Drawing.Point(190, 60);
+			this.btnCancel.Location = new System.Drawing.Point(190, 86);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(75, 23);
 			this.btnCancel.TabIndex = 4;
@@ -106,11 +108,21 @@ namespace USBWatchdogControl
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
 			// 
+			// chkAutostart
+			// 
+			this.chkAutostart.Location = new System.Drawing.Point(19, 41);
+			this.chkAutostart.Name = "chkAutostart";
+			this.chkAutostart.Size = new System.Drawing.Size(155, 24);
+			this.chkAutostart.TabIndex = 5;
+			this.chkAutostart.Text = "Autostart";
+			this.chkAutostart.UseVisualStyleBackColor = true;
+			// 
 			// FormOptions
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(273, 91);
+			this.ClientSize = new System.Drawing.Size(273, 119);
+			this.Controls.Add(this.chkAutostart);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.lblSeconds);

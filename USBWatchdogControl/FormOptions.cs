@@ -11,6 +11,7 @@ using System.IO;
 using System.Windows.Forms;
 using IniParser;
 using IniParser.Model;
+using Microsoft.Win32;
 
 namespace USBWatchdogControl
 {
@@ -20,6 +21,7 @@ namespace USBWatchdogControl
 	public partial class FormOptions : Form
 	{
 		private IniData ini_data;
+		private RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
 		
 		public FormOptions()
 		{
@@ -54,12 +56,26 @@ namespace USBWatchdogControl
 			} else {
 				ini_data = new IniData();
 			}
+			
+			RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+			
+			if (rk.GetValue(Application.ProductName)==null)
+				chkAutostart.Checked = false;
+			else
+				chkAutostart.Checked = true;							
 		}
 		
 		private bool _saveConfig() {
 			var ini = new FileIniDataParser();			
 			ini_data["global"]["heartbeat_timeout"] = nUDHeartbeatTimeout.Value.ToString();
 			ini.WriteFile(Globals.INI_FILENAME,ini_data,null);
+			
+			RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+			if (chkAutostart.Checked)
+            	rk.SetValue(Application.ProductName, Application.ExecutablePath);
+        	else
+            	rk.DeleteValue(Application.ProductName,false);            
+			
 			return true;
 		}
 		
