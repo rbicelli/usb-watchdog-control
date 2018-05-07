@@ -13,6 +13,8 @@ using System.Threading;
 using System.Windows.Forms;
 using IniParser;
 using IniParser.Model;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace USBWatchdogControl
 {
@@ -81,7 +83,10 @@ namespace USBWatchdogControl
 		#region Event Handlers
 		private void menuAboutClick(object sender, EventArgs e)
 		{			
-			MessageBox.Show("USB Watchdog Control.\nWritten by Riccardo Bicelli <r.bicelli@gmail.com>", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);			
+			Assembly assembly = Assembly.GetExecutingAssembly();
+			FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+			string version = fileVersionInfo.ProductVersion;
+			MessageBox.Show("USB Watchdog Control.\nVersion " +  version + "\nWritten by Riccardo Bicelli <r.bicelli@gmail.com>", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 		
 		private void menuExitClick(object sender, EventArgs e)
