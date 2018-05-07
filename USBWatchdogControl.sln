@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+# SharpDevelop 5.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USBWatchdogControl", "USBWatchdogControl\USBWatchdogControl.csproj", "{F731C8A3-3D14-4207-AE28-0A843CC77E66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F731C8A3-3D14-4207-AE28-0A843CC77E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F731C8A3-3D14-4207-AE28-0A843CC77E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F731C8A3-3D14-4207-AE28-0A843CC77E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F731C8A3-3D14-4207-AE28-0A843CC77E66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
