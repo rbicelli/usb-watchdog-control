@@ -22,8 +22,7 @@ namespace USBWatchdogControl
 	/// USB Watchdog Control Class. Send Heartbeat to USB Watchdog
 	/// </summary>
 	/// 
-		
-	
+			
 	public class USBWatchdog
 	{
 		public const int W_STATUS_CONNECTED = 101;
@@ -45,7 +44,7 @@ namespace USBWatchdogControl
         public USBWatchdog(int timeoutInSeconds)
 		{									
 			this.setTimeout(timeoutInSeconds);
-			//Todo: Load From INI File
+			//Todo: Load From INI File			
 			this.myVendorID = 20785;
       		this.myProductID = 8199;
 			this.deviceFound = _findDevice();
@@ -100,7 +99,7 @@ namespace USBWatchdogControl
 			message[0] = 128;
 			message[1] = 0;
 			r = _writeMessage(message);
-			this._HidDev = null;
+			this._HidDev = null; //Force a reconnect
 			return r;
 		}
 		
@@ -119,11 +118,9 @@ namespace USBWatchdogControl
 			this.heartbeatTimeout = (byte)(timeoutInSeconds/10);
 		}
 		
-		public void _StatusChanged(int iStatus) {												        	
-        	Debug.Print("Try Event " + iStatus.ToString());
+		public void _StatusChanged(int iStatus) {												        	        	
         	if (null != StatusChanged) {
-        		StatusChanged(this,new USBWatchdogEventArgs(iStatus));
-        		Debug.Print("Send Event " + iStatus.ToString());
+        		StatusChanged(this,new USBWatchdogEventArgs(iStatus));        		
         	}
 		}
 					
@@ -135,8 +132,8 @@ namespace USBWatchdogControl
 	    public USBWatchdogEventArgs(int _iStatus)
 	    {
 	    	i_Status = _iStatus;
-	    } // eo ctor
+	    }
 	
-	    public int Status {get{return i_Status;} }
-	} // eo class MyEventArgs
+	    public int Status {get{return i_Status;}}
+	}
 }

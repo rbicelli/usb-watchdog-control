@@ -1,6 +1,6 @@
 ﻿# USB Watchdog Control
 
-This is the Opensource implementation of the USB watchdog program who comes with USB watchdog used in mining rigs.
+This is the Opensource implementation of the USB watchdog program which comes with USB watchdog used in mining rigs.
 Tried and tested with the USB_WDG_V3.1.
 
 ## Features

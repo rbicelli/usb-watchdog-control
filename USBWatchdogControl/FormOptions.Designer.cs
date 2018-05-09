@@ -128,6 +128,7 @@ namespace USBWatchdogControl
 			this.Controls.Add(this.lblSeconds);
 			this.Controls.Add(this.nUDHeartbeatTimeout);
 			this.Controls.Add(this.lblTimeout);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "FormOptions";
