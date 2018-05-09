@@ -6,6 +6,9 @@ Tried and tested with the USB_WDG_V3.1.
 ## Features
 The program sits in System tray and sends heartbeat to USB device. The device detection is automatic. The only configurable options is the heartbeat timeout.  
 
+## Installation
+You can find the compiled version in [releases](https://github.com/rbicelli/usb-watchdog-control/releases)
+
 ## Requirements
 USBWatchdogControl is written in C#, using Sharpdevelop.
 
@@ -16,4 +19,4 @@ I used these two libs taken directly from nuGet:
 * [INIFileParser](https://github.com/rickyah/ini-parser)
 
 ## Buy me a Beer ;)
-If you want to buy me a beer my XMR address is: 46un6TXVK5NF4y8URSXmMLasH9D1dnn4R3bxKFxQALk63d1EUQtECanPE9JaMUTAS7Bste12BVqE72WpTbXmweJhFspKHMg
+My XMR address is: 46un6TXVK5NF4y8URSXmMLasH9D1dnn4R3bxKFxQALk63d1EUQtECanPE9JaMUTAS7Bste12BVqE72WpTbXmweJhFspKHMg
