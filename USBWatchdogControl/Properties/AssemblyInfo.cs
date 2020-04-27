@@ -10,11 +10,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("USBWatchdogControl")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("USB Watchdog control")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Sequence Software")]
 [assembly: AssemblyProduct("USBWatchdogControl")]
-[assembly: AssemblyCopyright("Copyright 2018")]
+[assembly: AssemblyCopyright("Copyright 2020 Riccardo Bicelli")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

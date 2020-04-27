@@ -14,7 +14,6 @@ using System.Windows.Forms;
 using IniParser;
 using IniParser.Model;
 using System.Reflection;
-using System.Diagnostics;
 
 namespace USBWatchdogControl
 {
@@ -30,8 +29,7 @@ namespace USBWatchdogControl
 		public NotificationIcon()
 		{
 			notifyIcon = new NotifyIcon();
-			notificationMenu = new ContextMenu(InitializeMenu());			
-			notifyIcon.DoubleClick += IconDoubleClick;
+			notificationMenu = new ContextMenu(InitializeMenu());						
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotificationIcon));
 			notifyIcon.Icon = (Icon)resources.GetObject("$this.IconOK");
 			notifyIcon.ContextMenu = notificationMenu;									
@@ -106,12 +104,7 @@ namespace USBWatchdogControl
 			Form f1 = new FormOptions();
 			f1.ShowDialog();
 			this._loadConfig();
-		}
-		
-		private void IconDoubleClick(object sender, EventArgs e)
-		{
-			MessageBox.Show("The icon was double clicked");
-		}
+		}		
 		
 		private void WatchdogStatus(object sender, USBWatchdogEventArgs e) {
 			string icon = "OK";

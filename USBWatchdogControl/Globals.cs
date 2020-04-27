@@ -6,15 +6,26 @@
  *  
  */
 using System;
+using System.IO;
 
 namespace USBWatchdogControl
 {
 	/// <summary>
-	/// Description of Globals.
+	/// Global Class
 	/// </summary>
 	public static class Globals
 	{
-		public const String INI_FILENAME = "usbwatchdog-config.ini";
+		public const string INI_FILE = "usbwatchdog-config.ini";
+		private static string _appDataFolder;
+		static Globals()
+		{
+			// Create Appdata folder id not exists
+			_appDataFolder = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\usbwatchdog";
+			if (!Directory.Exists(_appDataFolder)) Directory.CreateDirectory(_appDataFolder);
+		}
+		public static string INI_FILENAME {
+			get => _appDataFolder + @"\settings.ini";
+		}
 								
 	}
 }

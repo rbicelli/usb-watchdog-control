@@ -1,18 +1,22 @@
 ﻿[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/rbicelli)
  
- # USB Watchdog Control
+# USB Watchdog Control
 
 This is the Opensource implementation of the USB watchdog program which comes with USB watchdog used in mining rigs.
-Tried and tested with the USB_WDG_V3.1.
+Tried and tested with the *USB_WDG_V3.1.*
 
 ## Features
-The program sits in System tray and sends heartbeat to USB device. The device detection is automatic. The only configurable options is the heartbeat timeout.  
+The program sits in System tray and sends heartbeat to USB device. The device detection is automatic.
+You can configure the heartbeat timeout and to put on windows autostart.
 
 ## Installation
 You can find the compiled version in [releases](https://github.com/rbicelli/usb-watchdog-control/releases)
 
 ## Requirements
-USBWatchdogControl is written in C#, using Sharpdevelop.
+USBWatchdogControl is written in C#, using Visual Studio Community Edition.
+
+## License
+USBWatchdogControl is released under the MIT License
 
 Requires .NET Framework 3.5
 

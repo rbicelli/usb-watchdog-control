@@ -41,100 +41,103 @@ namespace USBWatchdogControl
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.lblTimeout = new System.Windows.Forms.Label();
-			this.nUDHeartbeatTimeout = new System.Windows.Forms.NumericUpDown();
-			this.lblSeconds = new System.Windows.Forms.Label();
-			this.btnOK = new System.Windows.Forms.Button();
-			this.btnCancel = new System.Windows.Forms.Button();
-			this.chkAutostart = new System.Windows.Forms.CheckBox();
-			((System.ComponentModel.ISupportInitialize)(this.nUDHeartbeatTimeout)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// lblTimeout
-			// 
-			this.lblTimeout.Location = new System.Drawing.Point(15, 16);
-			this.lblTimeout.Name = "lblTimeout";
-			this.lblTimeout.Size = new System.Drawing.Size(99, 18);
-			this.lblTimeout.TabIndex = 0;
-			this.lblTimeout.Text = "Heartbeat Timeout:";
-			// 
-			// nUDHeartbeatTimeout
-			// 
-			this.nUDHeartbeatTimeout.Location = new System.Drawing.Point(120, 16);
-			this.nUDHeartbeatTimeout.Maximum = new decimal(new int[] {
-			1280,
-			0,
-			0,
-			0});
-			this.nUDHeartbeatTimeout.Minimum = new decimal(new int[] {
-			30,
-			0,
-			0,
-			0});
-			this.nUDHeartbeatTimeout.Name = "nUDHeartbeatTimeout";
-			this.nUDHeartbeatTimeout.Size = new System.Drawing.Size(54, 20);
-			this.nUDHeartbeatTimeout.TabIndex = 1;
-			this.nUDHeartbeatTimeout.Value = new decimal(new int[] {
-			30,
-			0,
-			0,
-			0});
-			// 
-			// lblSeconds
-			// 
-			this.lblSeconds.Location = new System.Drawing.Point(182, 18);
-			this.lblSeconds.Name = "lblSeconds";
-			this.lblSeconds.Size = new System.Drawing.Size(66, 18);
-			this.lblSeconds.TabIndex = 2;
-			this.lblSeconds.Text = "Seconds";
-			// 
-			// btnOK
-			// 
-			this.btnOK.Location = new System.Drawing.Point(110, 86);
-			this.btnOK.Name = "btnOK";
-			this.btnOK.Size = new System.Drawing.Size(75, 23);
-			this.btnOK.TabIndex = 3;
-			this.btnOK.Text = "&OK";
-			this.btnOK.UseVisualStyleBackColor = true;
-			this.btnOK.Click += new System.EventHandler(this.BtnOKClick);
-			// 
-			// btnCancel
-			// 
-			this.btnCancel.Location = new System.Drawing.Point(190, 86);
-			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(75, 23);
-			this.btnCancel.TabIndex = 4;
-			this.btnCancel.Text = "&Cancel";
-			this.btnCancel.UseVisualStyleBackColor = true;
-			this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
-			// 
-			// chkAutostart
-			// 
-			this.chkAutostart.Location = new System.Drawing.Point(19, 41);
-			this.chkAutostart.Name = "chkAutostart";
-			this.chkAutostart.Size = new System.Drawing.Size(155, 24);
-			this.chkAutostart.TabIndex = 5;
-			this.chkAutostart.Text = "Autostart";
-			this.chkAutostart.UseVisualStyleBackColor = true;
-			// 
-			// FormOptions
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(273, 119);
-			this.Controls.Add(this.chkAutostart);
-			this.Controls.Add(this.btnCancel);
-			this.Controls.Add(this.btnOK);
-			this.Controls.Add(this.lblSeconds);
-			this.Controls.Add(this.nUDHeartbeatTimeout);
-			this.Controls.Add(this.lblTimeout);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.MaximizeBox = false;
-			this.MinimizeBox = false;
-			this.Name = "FormOptions";
-			this.Text = "Options";
-			((System.ComponentModel.ISupportInitialize)(this.nUDHeartbeatTimeout)).EndInit();
-			this.ResumeLayout(false);
+            this.lblTimeout = new System.Windows.Forms.Label();
+            this.nUDHeartbeatTimeout = new System.Windows.Forms.NumericUpDown();
+            this.lblSeconds = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.chkAutostart = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDHeartbeatTimeout)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblTimeout
+            // 
+            this.lblTimeout.Location = new System.Drawing.Point(15, 16);
+            this.lblTimeout.Name = "lblTimeout";
+            this.lblTimeout.Size = new System.Drawing.Size(99, 18);
+            this.lblTimeout.TabIndex = 0;
+            this.lblTimeout.Text = "Heartbeat &Timeout:";
+            // 
+            // nUDHeartbeatTimeout
+            // 
+            this.nUDHeartbeatTimeout.Location = new System.Drawing.Point(120, 16);
+            this.nUDHeartbeatTimeout.Maximum = new decimal(new int[] {
+            1280,
+            0,
+            0,
+            0});
+            this.nUDHeartbeatTimeout.Minimum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.nUDHeartbeatTimeout.Name = "nUDHeartbeatTimeout";
+            this.nUDHeartbeatTimeout.Size = new System.Drawing.Size(54, 20);
+            this.nUDHeartbeatTimeout.TabIndex = 1;
+            this.nUDHeartbeatTimeout.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            // 
+            // lblSeconds
+            // 
+            this.lblSeconds.Location = new System.Drawing.Point(182, 18);
+            this.lblSeconds.Name = "lblSeconds";
+            this.lblSeconds.Size = new System.Drawing.Size(66, 18);
+            this.lblSeconds.TabIndex = 2;
+            this.lblSeconds.Text = "Seconds";
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(110, 87);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 4;
+            this.btnOK.Text = "&OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.BtnOKClick);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(190, 87);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "&Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
+            // 
+            // chkAutostart
+            // 
+            this.chkAutostart.Location = new System.Drawing.Point(19, 45);
+            this.chkAutostart.Name = "chkAutostart";
+            this.chkAutostart.Size = new System.Drawing.Size(155, 24);
+            this.chkAutostart.TabIndex = 3;
+            this.chkAutostart.Text = "&Autostart";
+            this.chkAutostart.UseVisualStyleBackColor = true;
+            // 
+            // FormOptions
+            // 
+            this.AcceptButton = this.btnOK;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(273, 118);
+            this.Controls.Add(this.chkAutostart);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.lblSeconds);
+            this.Controls.Add(this.nUDHeartbeatTimeout);
+            this.Controls.Add(this.lblTimeout);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormOptions";
+            this.Text = "Options";
+            ((System.ComponentModel.ISupportInitialize)(this.nUDHeartbeatTimeout)).EndInit();
+            this.ResumeLayout(false);
 
 		}
 	}
